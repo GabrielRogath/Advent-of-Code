@@ -1,6 +1,7 @@
 
 const fs = require('fs');
 
+///part One ///////
 const input = fs
 .readFileSync("input.txt", { encoding: "utf-8" })
 .split("\n")
@@ -8,8 +9,7 @@ const input = fs
 .map((x) => parseInt(x));
 
 function puzzle(){
-  console.log(input);
-
+    
   let count = 0;
   for(let i=1; i<input.length; i++){
 
@@ -22,3 +22,32 @@ function puzzle(){
 }
 
 puzzle();
+
+
+////part two /////
+function two(){
+let countIn = 0;
+
+let previousSum = 0;
+let currentSum = 0;
+
+for(let i= 1; i<=input.length-3; i++){
+    
+    
+    currentSum = input[i] + input[i + 1] + input[i + 2];
+
+    if(currentSum > previousSum && previousSum > 0){
+        countIn++;
+       
+    }
+
+
+previousSum = currentSum;
+
+}
+
+console.log(countIn);
+
+}
+
+two();

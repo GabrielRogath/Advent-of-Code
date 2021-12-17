@@ -1,7 +1,4 @@
 const fs = require('fs');
-const fILE = fs
-.readFileSync('input.txt', { encoding: "utf-8" });
-
 
 const input = fs.readFileSync("input.txt", { encoding: "utf-8" }).split("\r\n");
 
@@ -27,8 +24,6 @@ function kataArray(x){
 
         depth -= num
     }
-
-    console.log(jipya);
 }
 
 console.log(horizontal * depth);
@@ -60,8 +55,6 @@ function aiming(x){
 
         aim -= num;
     }
-
-    console.log(jipya);
 }
 
 console.log(horizontal * depth);
